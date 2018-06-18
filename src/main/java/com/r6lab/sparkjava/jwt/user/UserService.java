@@ -1,5 +1,6 @@
 package com.r6lab.sparkjava.jwt.user;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -11,7 +12,7 @@ public final class UserService {
         if (users.stream().filter(user -> user.getUsername().equals(userName)).findAny().isPresent()) {
             throw new IllegalArgumentException("User already exists");
         }
-        users.add(User.of(userName, password, firstName, lastName));
+        users.add(User.of(userName, password, firstName, lastName, new ArrayList<>()));
     }
 
     public final User get(String userName) {
@@ -20,6 +21,10 @@ public final class UserService {
                 .filter(user -> user.getUsername().equals(userName))
                 .findAny()
                 .orElseThrow(() -> new IllegalStateException("User does not exist"));
+    }
+
+    public final void update(User user) {
+        users.add(user);
     }
 
 }
