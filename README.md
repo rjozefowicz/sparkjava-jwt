@@ -14,4 +14,19 @@ HTTP Header: Authorization: Bearer JWTToken
 * /logout - HTTP POST - JWT Token revocation
 * /me - HTTP GET - User details
 
-## Cron job (every minute) to clean up revoked JWT Tokens
+## Roles
+
+Defined user roles: ADMIN, MANAGER, DEVELOPER
+
+Endpoints for Role management:
+
+* /auth/role - HTTP POST - add new ROLE to user (JSON body mandatory fields: userName, role)
+* /auth/role - HTTP DELETE - revoke ROLE from user (JSON body mandatory fields: userName, role)
+
+## Admin user
+
+Predefined Admin user (admin/admin)
+
+## Additional 
+
+Cron job (every minute) to clean up revoked JWT Tokens
