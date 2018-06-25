@@ -1,6 +1,11 @@
 # sparkjava-jwt
 Example SparkJava - JWT integration
 
+# tech
+![](https://img.shields.io/badge/java%208-%E2%9C%93-blue.svg)
+![](https://img.shields.io/badge/sparkjava-✓-blue.svg)
+![](https://img.shields.io/badge/jwt-✓-blue.svg)
+
 ## Public available endpoints
 
 | ENDPOINT | HTTP METHOD | PARAMS | DESCRIPTION |
